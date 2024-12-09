@@ -2,6 +2,7 @@ import {
   Anchor,
   Button,
   H1,
+  Image,
   Paragraph,
   Separator,
   Sheet,
@@ -68,7 +69,13 @@ export function HomeScreen({ pagesMode = false }: { pagesMode?: boolean }) {
         <Separator />
       </YStack>
 
-      <Button {...linkProps}>Link to user</Button>
+      <Image
+        source={{ uri: 'https://picsum.photos/200/300' }}
+        style={{ width: 200, height: 300 }}
+        onPress={() => {
+          console.log('pressed')
+        }}
+      />
 
       <SheetDemo />
     </YStack>
